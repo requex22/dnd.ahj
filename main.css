@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container {
+  width: 1000px;
+  min-height: 500px;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tasklist {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: cornsilk;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.tasklist__bar {
+  width: 30%;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+  background-color: ivory;
+  padding: 15px;
+}
+
+.tasklist__header {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tasklist__list {
+  text-decoration: none;
+  min-height: 10px;
+}
+
+.tasklist__task {
+  position: relative;
+  overflow-wrap: break-word;
+  border: 1px dashed darkorange;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.tasklist__task-delete-btn,
+.tasklist__task-cancel-button {
+  position: absolute;
+  display: block;
+  /* ниже хак, без которого крестик не центрируется Т_Т */
+  line-height: 16px;
+  text-align: center;
+  top: 2px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(255, 140, 0, 0.3);
+  cursor: pointer;
+}
+
+.tasklist__add-task {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tasklist__add-task:hover {
+  background-color: rgb(255, 239, 227);
+}
+.tasklist__add-task-block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tasklist__task-input {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100px;
+  padding: 5px;
+  font-family: inherit;
+  margin-bottom: 5px;
+}
+
+.tasklist__task-add-button {
+  padding: 5px 10px;
+  border: 1px solid darkorange;
+  background-color: rgba(255, 140, 0, 0.3);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.tasklist__task-cancel-button {
+  position: unset;
+}
+
+.drop-point {
+  border: 1px dashed gray;
+  background-color: rgba(128, 128, 128, 0.1);
+  margin-bottom: 5px;
+  /* min-height: 33px;
+    max-height: 100px; */
+}
+
+.hidden {
+  display: none;
+}
+
+.tasklist__task:hover > .hidden {
+  display: block;
+}
+
+.tasklist__task.dragged {
+  position: absolute;
+  z-index: 999;
+  width: 200px;
+  min-width: 240px;
+  overflow-wrap: break-word;
+  background-color: ivory;
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: grabbing;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
